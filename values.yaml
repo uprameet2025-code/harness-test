@@ -1,6 +1,6 @@
 replicaCount: 2
 
-namespace: prameet   # this matches the namespace you used in Infra Definition
+namespace: HarnessRocks   
 
 service:
   name: harness-nginx-svc
