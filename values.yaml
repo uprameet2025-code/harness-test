@@ -1,0 +1,8 @@
+replicaCount: 1
+
+namespace: prameet   # this matches the namespace you used in Infra Definition
+
+service:
+  name: harness-nginx-svc
+  type: ClusterIP
+  port: 80
