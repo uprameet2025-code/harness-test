@@ -1,6 +1,6 @@
 replicaCount: 2
 
-namespace: HarnessRocks   
+namespace: harness-rocks   
 
 service:
   name: harness-nginx-svc
