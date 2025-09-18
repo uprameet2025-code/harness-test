@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: harness-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: harness-nginx
+  template:
+    metadata:
+      labels:
+        app: harness-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: harness-nginx-svc
+spec:
+  selector:
+    app: harness-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
